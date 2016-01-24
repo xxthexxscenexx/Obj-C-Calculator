@@ -37,13 +37,16 @@
 
 // Perform a given operation
 -(double) performOperation: (NSString *)operation{
-    double result = 0;
     // calculate results
-    
-    if ([operation isEqualToString:@"➕"]){
+    double result = 0;
+    if ([operation isEqualToString:@"+"]){
         result = [self popOperand] + [self popOperand];
+    } else if ([@"*" isEqualToString:operation]){
+        result = [self popOperand] * [self popOperand];
     }
+    [self pushOperand:result]; 
     
+    NSLog(@"%f", result);
     return result;
 }
 

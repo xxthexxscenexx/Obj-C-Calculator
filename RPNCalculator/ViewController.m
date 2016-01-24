@@ -7,16 +7,25 @@
 //
 
 #import "ViewController.h"
+#import "CalulatorModel.h"
 
 @interface ViewController ()
 
 @property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
+@property (nonatomic) CalulatorModel *brain;
 
 @end
 
 @implementation ViewController
 @synthesize display = _display; // property for the calulator display
 @synthesize userIsInTheMiddleOfEnteringANumber = _userTab; // property for knowing if user is typing a number
+@synthesize brain = _brain;
+
+// Calculator Model getter
+- (CalulatorModel *) brain {
+    if (!_brain) _brain = [[CalulatorModel alloc] init];
+    return _brain;
+}
 
 // DIGIT IS BEING PRESSED ACTION
 - (IBAction)digitPressed:(UIButton*)sender {
@@ -30,11 +39,19 @@
 }
 
 // OPERATION IS BEING PRESSD ACTION
-- (IBAction)operationPressed:(id)sender {
+- (IBAction)operationPressed:(UIButton *)sender {
+    
+    if (self.userIsInTheMiddleOfEnteringANumber) [self enterPressed]; // press enter
+    
+    double result = [self.brain performOperation:sender.currentTitle]; // result as a double
+    NSString *resultString = [NSString stringWithFormat:@"%g", result]; // result as a string
+    self.display.text = resultString;
 }
 
 // ENTER BUTTON PRESSED
 - (IBAction)enterPressed {
+    [self.brain pushOperand:[self.display.text doubleValue]]; // send double value to push operand
+    self.userIsInTheMiddleOfEnteringANumber = NO;
 }
 
 @end
