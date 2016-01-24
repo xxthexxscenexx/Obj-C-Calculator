@@ -13,9 +13,11 @@
 		DC52A1551C542D570048B282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC52A1531C542D570048B282 /* Main.storyboard */; };
 		DC52A1571C542D570048B282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC52A1561C542D570048B282 /* Assets.xcassets */; };
 		DC52A15A1C542D570048B282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC52A1581C542D570048B282 /* LaunchScreen.storyboard */; };
+		DC77E05A1C548C7300B051DA /* CalculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DC77E0591C548C7300B051DA /* CalculatorModel.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC28FF451C548B2300536AFB /* CalulatorModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalulatorModel.h; sourceTree = "<group>"; };
 		DC52A1471C542D570048B282 /* RPNCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPNCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC52A14B1C542D570048B282 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DC52A14D1C542D570048B282 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,7 @@
 		DC52A1561C542D570048B282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC52A1591C542D570048B282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC52A15B1C542D570048B282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC77E0591C548C7300B051DA /* CalculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				DC52A1501C542D570048B282 /* ViewController.h */,
 				DC52A1511C542D570048B282 /* ViewController.m */,
 				DC52A1531C542D570048B282 /* Main.storyboard */,
+				DC77E0591C548C7300B051DA /* CalculatorModel.m */,
+				DC28FF451C548B2300536AFB /* CalulatorModel.h */,
 				DC52A1561C542D570048B282 /* Assets.xcassets */,
 				DC52A1581C542D570048B282 /* LaunchScreen.storyboard */,
 				DC52A15B1C542D570048B282 /* Info.plist */,
@@ -153,6 +158,7 @@
 				DC52A1521C542D570048B282 /* ViewController.m in Sources */,
 				DC52A14F1C542D570048B282 /* AppDelegate.m in Sources */,
 				DC52A14C1C542D570048B282 /* main.m in Sources */,
+				DC77E05A1C548C7300B051DA /* CalculatorModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +307,7 @@
 				DC52A1601C542D570048B282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
