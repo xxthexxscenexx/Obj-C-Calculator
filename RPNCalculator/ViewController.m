@@ -32,11 +32,11 @@
     NSString *digit = [sender currentTitle]; // current title copied into local variable digit
     if (self.userIsInTheMiddleOfEnteringANumber){
         self.display.text = [self.display.text stringByAppendingString:digit]; // my displays text is equal to the current display text with the new appended digit (utalizes a setter and getter)
-        NSLog(@"Digit Pressed: %@", digit); // digit is being recognized
+        // NSLog(@"Digit Pressed: %@", digit); // digit is being recognized
     } else {
         self.display.text = digit;
         self.userIsInTheMiddleOfEnteringANumber = YES;
-        NSLog(@"Digit Pressed: %@", digit); // digit is being recognized
+        // NSLog(@"Digit Pressed: %@", digit); // digit is being recognized
     }
 }
 
@@ -50,14 +50,14 @@
     double result = [self.brain performOperation:sender.currentTitle]; // result as a double
     NSString *resultString = [NSString stringWithFormat:@"%g", result]; // result as a string
     self.display.text = resultString;
-    NSLog(@"Resulting String: %@", resultString);
+    // NSLog(@"Resulting String: %@", resultString);
 }
 
 // ENTER BUTTON PRESSED
 - (IBAction)enterPressed {
     [self.brain pushOperand:[self.display.text doubleValue]]; // send double value to push operand
     self.userIsInTheMiddleOfEnteringANumber = NO;
-    NSLog(@"Enter has been pressed.");
+    // NSLog(@"Enter has been pressed.");
 }
 
 @end
